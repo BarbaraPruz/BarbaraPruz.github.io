@@ -15,7 +15,7 @@ Most of my experience has been in C/C++ and I’ve done just about everything re
 
 Why am I in a bootcamp?  Well, I want to do web development.   There are so many interesting things going on in this space.   I’m self-taught in a few web technologies – html, css, boostrap, javascript, jquery.   But I want to sharpen those skills and add more tools in my tool box.  Though you can definitely learn things on your own, there are huge benefits when learning from experts and in a community.   
 
-I am now 2 weeks into my bootcamp journey.   Along the way, I hope to share some interesting observations and thoughts.
+I am now 2 weeks into my bootcamp journey.   Along the way, I hope to share some interesting observations and thoughts
 
 
 
