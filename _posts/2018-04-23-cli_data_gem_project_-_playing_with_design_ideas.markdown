@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "CLI Data Gem Project - Playing with Design Ideas"
-date:       2018-04-24 01:02:42 +0000
+date:       2018-04-23 21:02:43 -0400
 permalink:  cli_data_gem_project_-_playing_with_design_ideas
 ---
 
@@ -10,7 +10,7 @@ The CLI Data Gem Project requires scraping an external web site and providing ac
 
 In the curriculum, there have been several scraping labs that use similar designs.  In the Student Scraper lab, there are 3 classes - CLI, Student "data holder", and Scraper.  The interesting part is how the data gets populated.   Using similar class interfaces for my project, the interactions look like this:
 
-![Original Design](https://drive.google.com/uc?id=12fm2NTBkKEEYwz8DOubzelnPWXp1Ud53)
+![Original Design](https://drive.google.com/uc?id=15TUH8Se9yJJgUeiKlodoMewiP4T2LDCI)
 
 This approach seems reasonable and originally, I was just going to copy it.   But then I thought it might be fun to play around. When checking design, it is always interesting to ask a few questions like are responsibilities encapsulated?   Is there duplication of code?    I also like to keep in mind that code often lives on much longer than planned.  It gets 
 enhanced or evolves into a different app.  So I try to imagine potential enhancements or how the app code might be re-used in a related application.   
@@ -26,7 +26,7 @@ stories" interface.   Child classes can implement whatever is needed to get the 
 
 After a few iterations, here is the new design. The CLI just tells the Story class to create stories using a source (CSMScraper).   The Story class tells the Source to collect stories - each story collected includes all the attributes required by the gem.  
 
-![Revised Design](https://drive.google.com/uc?id=12xZaSOaPaMQMoI66tBokx5FSvBI4JLWN)
+![Revised Design](https://drive.google.com/uc?id=1efLV9hVJpPK6ur409gXWSgkGDWzd3p0F)
 
 Now to meet my dream requirements
 
