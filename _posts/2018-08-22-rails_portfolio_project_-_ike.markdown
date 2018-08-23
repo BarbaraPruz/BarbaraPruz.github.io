@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails Portfolio Project -  ‘ike"
-date:       2018-08-23 01:16:18 +0000
+date:       2018-08-22 21:16:19 -0400
 permalink:  rails_portfolio_project_-_ike
 ---
 
@@ -26,5 +26,5 @@ Based on this, I started to see the application models and relationships.  For e
 
 And the functionality started to identify routes :  Users need to login and logout, and of course, there will need to be CRUD for the Users.   Admin Users will need to be able to maintain (create, edit, delete) Articles and Topics.   All Users will need to be able to create and delete their Bookmarks.  Users will need to be able to “like” an Article.
 
-With these ideas taking form, I started coding and filling in the additional details.
+With these ideas taking form, I started coding and filling in the additional details.  Check it out at [https://github.com/BarbaraPruz/ike](http://)
 
