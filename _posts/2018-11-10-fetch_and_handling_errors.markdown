@@ -19,7 +19,7 @@ fetch(uri)
     })   
 ```
 
-But does this really prevent the app from trying to process a response with an HTTP error/non-success status code?   Is it necessary to check the response ok flag before working with the response? I decided to try some experiments and wrote a small test app. You can find it here: [github.com/BarbaraPruz/fetchit](/https://github.com/BarbaraPruz/fetchit).  
+But does this really prevent the app from trying to process a response with an HTTP error/non-success status code?   Is it necessary to check the response ok flag before working with the response? I decided to try some experiments and wrote a small test app. You can find it here: [github.com/BarbaraPruz/fetchit](https://github.com/BarbaraPruz/fetchit).  
 
 ![](https://drive.google.com/uc?id=10u2isxAfaGW8mUsGVgzaYs-o4WxjzFFu)
 
