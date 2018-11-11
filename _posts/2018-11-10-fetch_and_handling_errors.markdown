@@ -19,7 +19,7 @@ fetch(uri)
     })   
 ```
 
-But does this really prevent the app from trying to process a response with an HTTP error/non-success status code?   Is it necessary to check the response ok flag before working with the response? I decided to try some experiments.  I wrote a small test app and you can find it here [https://github.com/BarbaraPruz/fetchit](/https://github.com/BarbaraPruz/fetchit).  See readme for instruction on running. 
+But does this really prevent the app from trying to process a response with an HTTP error/non-success status code?   Is it necessary to check the response ok flag before working with the response? I decided to try some experiments and wrote a small test app. You can find it here: [github.com/BarbaraPruz/fetchit](/https://github.com/BarbaraPruz/fetchit).  
 
 ![](https://drive.google.com/uc?id=10u2isxAfaGW8mUsGVgzaYs-o4WxjzFFu)
 
@@ -42,7 +42,7 @@ So what happens?  As expected, for a successful response code (200), the end res
     Completed Response Processing, Payload: Responding to HTTP Get with status code 500
 		
 Without the ok flag check, the response is converted to JSON and then handled.  This is no real problem for the test
-app because even with the bad status, there is a valid JSON payload.   But for an actual issue, like an HTTP 500, there would be no JSON payload.  The code to process the response will need to check for undefined.  In the app, you can see this by selecting the undefined route option.
+app because even with the bad status, there is a valid JSON payload.   But for an actual issue, like an HTTP 500, there would be no JSON payload.  The code to process the response will need to check for undefined.  In the app, you can see this by selecting the invalid route option.
 
     ------------------
     Test Start for /api/invalid/400 with response ok check
@@ -56,14 +56,14 @@ app because even with the bad status, there is a valid JSON payload.   But for a
     Converted Response to JSON
     Completed Response Processing, Payload: undefined
 
-To detect HTTP error status codes in the fetch response handling, it is necessary to check the response ok flag.   Here is an example of some general code that can be used – this code will catch errors for HTTP error codes as well as general network errors (detected by fetch).  If checking for specific status codes, response.status contains the integer value.
+To detect HTTP error status codes in the fetch response handling, it is necessary to check the response ok flag.   Here is an example of a general implementation – this code will catch errors for HTTP error codes as well as network errors (detected by fetch).  If checking for specific status codes, response.status contains the integer value.
 
 ```
 fetch(uri)    
-    .then(res => {
-        if (!res.ok) {
-            throw Error(res.statusText);
-        return res;   
+    .then(response => {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        return response;   
     })                               
     .then(response => response.json())
     .then(response =>{
